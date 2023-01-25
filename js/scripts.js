@@ -351,7 +351,7 @@ $(document).ready(function(){
             //thumbs slider
             $('.photos-slider-box .slider-dots .slick-dots').slick({
                 dots: false,
-                slidesToShow: 8,
+                slidesToShow: 3,
                 vertical: true,
                 variableWidth: false,
                 infinite: false,
@@ -638,10 +638,10 @@ if (!!$('.main-slider-box').offset()) {
         ]
     });
 
-
-    
-    
-    
     
 }
-    
+$(window).on('load', function () {
+    var newYear = new Date();
+    newYear = new Date(newYear.getFullYear(), 4 - 1, 1);
+    $('#timer').countdown({until: newYear});
+});
